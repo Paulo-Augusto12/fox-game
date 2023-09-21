@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://fbk2y3lw5koj"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_j3ihp"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_j3ihp")
+
+[node name="Play" type="Button" parent="."]
+texture_filter = 1
+offset_left = 504.0
+offset_top = 245.0
+offset_right = 691.0
+offset_bottom = 293.0
+text = "Play"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="."]
+texture_filter = 1
+offset_left = 502.0
+offset_top = 323.0
+offset_right = 689.0
+offset_bottom = 371.0
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
